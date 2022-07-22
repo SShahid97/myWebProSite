@@ -1,12 +1,7 @@
+<?php require_once("../credentials.php")?>
 <?php
-    //creating constants
-    define('host','localhost');
-    define('username','root');
-    define('password','');
-    define('dbname','books');
-
     //creating connection
-    $conn = mysqli_connect(host,username,password,dbname);
+     $conn = mysqli_connect($HOST,$USERNAME,$PASSWORD,$DBNAME);
 
     if(mysqli_connect_errno()){
         echo "There was an error while creating the connection".mysqli_connect_error();

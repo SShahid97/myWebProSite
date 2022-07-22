@@ -129,7 +129,7 @@
             <?php foreach($Limitedbooks as $Limitedbook): ?>
             <a href="bookDetails.php?book_id=<?php echo $Limitedbook['book_id']; ?>" style="text-decoration:none;">  
             <div class="card card-css">
-                <img class="card-img-top" style="height:18em; padding:6px;" src="images/<?php echo $Limitedbook['book_image']; ?>.jpg" atl="Card image cap">
+                <img class="card-img-top" style="height:18em; padding:6px;" src="images/<?php echo $Limitedbook['book_image']; ?>.jpg" alt="Card image cap">
                 <div class="card-body" style="padding:10px 5px;">
                     <p class="card-title" style="margin-bottom:0; font-size:1rem;">&nbsp;<?php echo $Limitedbook['book_name']; ?></p>
                     <h6 class="card-subtitle mb-2" style="margin-top:5px;" > &nbsp;Rs.<strong> <?php echo $Limitedbook['price']; ?></strong></h6>
