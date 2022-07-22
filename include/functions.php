@@ -13,10 +13,10 @@
         return $books;
     }
 
-    function getJSBooks(){
+	function getBooksByCategory($category){
         global $conn;
         //Create query
-        $query = "SELECT * FROM web_prog_books WHERE category='js_book'";
+        $query = "SELECT * FROM web_prog_books WHERE category='$category'";
         //execute query
         $result = mysqli_query($conn, $query);
         //fetch all the data from the table
@@ -25,58 +25,7 @@
         mysqli_free_result($result);
         return $books;
     }
-
-    function getCSSBooks(){
-        global $conn;
-        //Create query
-        $query = "SELECT * FROM web_prog_books WHERE category='css_book'";
-        //execute query
-        $result = mysqli_query($conn, $query);
-        //fetch all the data from the table
-        $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        //free the result variable
-        mysqli_free_result($result);
-        return $books;
-    }
-
-    function getPHPBooks(){
-        global $conn;
-        //Create query
-        $query = "SELECT * FROM web_prog_books WHERE category='php_book'";
-        //execute query
-        $result = mysqli_query($conn, $query);
-        //fetch all the data from the table
-        $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        //free the result variable
-        mysqli_free_result($result);
-        return $books;
-    }
-
-    function getMySQLBooks(){
-        global $conn;
-        //Create query
-        $query = "SELECT * FROM web_prog_books WHERE category='mysql_book'";
-        //execute query
-        $result = mysqli_query($conn, $query);
-        //fetch all the data from the table
-        $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        //free the result variable
-        mysqli_free_result($result);
-        return $books;
-    }
-
-    function getHTMLBooks(){
-        global $conn;
-        //Create query
-        $query = "SELECT * FROM web_prog_books WHERE category='html_book'";
-        //execute query
-        $result = mysqli_query($conn, $query);
-        //fetch all the data from the table
-        $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        //free the result variable
-        mysqli_free_result($result);
-        return $books;
-    }
+	
 
     function getAllInOneBooks(){
         global $conn;

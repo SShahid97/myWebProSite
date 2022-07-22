@@ -5,23 +5,24 @@
     $category=$_GET['cat'];  
     
     if ($category == 'js'){
-        $books=getJSBooks();
+		
+        $books=getBooksByCategory('js_book');
         $page_title="JavaScript (JS) Books"; 
     }
     elseif ($category == 'css'){
-        $books=getCSSBooks();
+        $books=getBooksByCategory('css_book');
         $page_title="Cascading Stylesheet (CSS) Books";
     }
     elseif($category == 'php'){
-        $books=getPHPBooks();
+        $books=getBooksByCategory('php_book');
         $page_title="Pre-Processor HyperText (PHP) Books";
     }
     elseif($category == 'html'){
-        $books=getHTMLBooks();
+        $books=getBooksByCategory('html_book');
         $page_title="HyperText Markup Language (HTML) Books";
     }
     elseif($category == 'sql'){
-        $books=getMySQLBooks();
+        $books=getBooksByCategory('mysql_book');
         $page_title="MySQL Books";
     }
 ?>
